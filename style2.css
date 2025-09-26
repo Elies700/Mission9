@@ -1,0 +1,22 @@
+.block1{
+    background-color: blue;
+    float: left;
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+
+}
+.block2{
+    margin-left: 20px;
+    height: 300px;
+    width: 400px;
+    background-color: crimson;
+    float: right;
+}
+.block3{
+    margin-left: 20px;
+    height: 300px;
+    width: 400px;
+    background-color: yellowgreen;
+    clear: both;
+}
