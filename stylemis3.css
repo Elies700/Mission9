@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: white;
+    background-color: #DB23A4;
     color: #D9968B;
     padding: 20px 0;
     text-align: center; 
@@ -94,5 +94,6 @@ input[type="submit"]:hover {
         background-color: #D9968B
 
     }
+
 
 
