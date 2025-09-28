@@ -1,6 +1,6 @@
 body {
     font-family: "Verdana", sans-serif;
-    background-color: #D9968B;
+    background-color: green;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -92,4 +92,5 @@ input[type="submit"]:hover {
     h2 {
         text-align: center;
         background-color: #D9968B
+
     }
