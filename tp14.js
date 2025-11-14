@@ -51,3 +51,43 @@ function reinit()
     t1.value = "";
     t2.value = "";
 }
+function seconnecter3() {
+    var i = 0;
+    do {
+        var id = prompt("Entrez votre nom d'utilisateur");
+        var mdp = prompt("Entrez votre mot de passe");
+        
+        if (id == "admin" && mdp == "admin") {
+            document.write("bienvenue " + id);
+            break;
+        } else {
+            alert("Accès refusé");
+        }
+        i = i + 1;
+    } while (i < 3);
+
+    if (i == 3) alert("Delai dépassé");
+}
+function addLigne() {
+    // Récupérer la référence du tableau
+    var name = document.getElementById("nom").value;
+    var age = document.getElementById("age").value;
+
+    if (name == "" || age == "") {
+        alert("un des deux éléments n'est pas complet ou validé");
+    } else if (age < 10 || age > 20) {
+        alert("L'âge n'est pas valide");
+    } else {
+        var table = document.getElementById("myTable");
+        var newRow = table.insertRow(-1);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+
+        cell1.innerHTML = name;
+        cell2.innerHTML = age;
+    }
+}
+function tableau() {
+    window.location.href = "tableau14.html";
+}
