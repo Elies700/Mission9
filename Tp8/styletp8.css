@@ -1,0 +1,64 @@
+div {
+    background-color: blue;
+    height: 75px;
+    width: 100%;
+    margin: 10px;
+}
+p 
+{
+    color: aqua;
+}
+
+.a1{
+    background-color: red;
+    height: 75px;
+    width: 100%;
+    margin: 10px;
+}
+.a2{
+    background-color: white;
+    height: 100%;
+    width: 30%;
+    margin: 10px;
+    float: left;
+    border-radius: 30px;
+}
+.a3{
+    background-color: white;
+    height: 100%;
+    width: 30%;
+    margin: 10px;
+    float: left;
+    border-radius: 30px;
+}
+.a4{
+    background-color: white;
+    height: 100%;
+    width: 30%;
+    margin: 10px;
+    float: left;
+    border-radius: 30px;
+}
+.a5{
+    background-color: purple;
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+    clear: both;
+}
+.b1{
+    background-color: greenyellow;
+    height: 100px;
+    width: 90%;
+    margin: 50px;
+    float: left;
+    border-radius: 30px;
+}
+.b2{
+    background-color: pink;
+    height: 400px;
+    width: 90%;
+    margin: 50px;
+    float: left;
+    border-radius: 30px;
+}
