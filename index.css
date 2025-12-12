@@ -6,42 +6,33 @@
     font-family: Consolas, "Courier New", monospace;
 }
 
-/* -------- GLOBAL & VIDEO DE FOND -------- */
-body {
-    background: #0a0f1f; /* Fallback si la vidéo ne charge pas */
-    color: #ccd6f6;
-    line-height: 1.6;
-    padding: 25px;
-    position: relative; /* Base pour la superposition */
-    z-index: 1; /* Le contenu est au-dessus de la vidéo */
-}
-
-#gif-background {
-    position: fixed; /* Reste en fond */
+/* -------- VIDEO DE FOND -------- */
+#video-background {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
-    background-image: url("Lionel Messi Soccer GIF.gif"); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    z-index: -10; /* Toujours derrière le contenu */
-    filter: brightness(60%);
+    object-fit: cover;
+    z-index: -10;
+    filter: brightness(55%);
 }
 
+/* -------- GLOBAL -------- */
+body {
+    color: #ccd6f6;
+    line-height: 1.6;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
 }
 
 /* -------- HEADER -------- */
 header {
     text-align: center;
     padding: 40px 20px;
-    
-    background: transparent; /* Rendu transparent pour voir la vidéo */
-    backdrop-filter: blur(5px); /* Ajoute un flou sur les éléments derrière (la vidéo) */
-
+    background: rgba(10, 15, 31, 0.4);
+    backdrop-filter: blur(6px);
     border: 1px solid #1f4068;
     border-radius: 12px;
     box-shadow: 0 0 15px #1f406880;
@@ -52,19 +43,16 @@ header h1 {
     font-size: 2.8rem;
     color: #66fcf1;
     text-shadow: 0 0 8px #45a29e;
-    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.1rem;
     color: #c5c6c7;
 }
 
 /* -------- SECTIONS -------- */
 section {
-    background: transparent; /* Rendu transparent pour voir la vidéo */
-    backdrop-filter: blur(5px); /* Ajoute un flou sur les éléments derrière (la vidéo) */
-
+    background: rgba(10, 15, 31, 0.4);
+    backdrop-filter: blur(6px);
     border: 1px solid #23395d;
     border-radius: 12px;
     padding: 30px;
@@ -74,17 +62,14 @@ section {
 
 /* -------- TITRES -------- */
 section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
     color: #66fcf1;
     text-shadow: 0 0 6px #45a29e;
+    margin-bottom: 10px;
 }
 
 section h3 {
     margin-top: 25px;
-    font-size: 1.4rem;
     color: #4dd0e1;
-    text-shadow: 0 0 6px #23a8b0;
 }
 
 /* -------- LISTES -------- */
@@ -92,12 +77,11 @@ ul {
     list-style: none;
     margin-top: 15px;
     display: grid;
-    /* Crée une grille de colonnes auto-ajustables (min 180px) */
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 12px;
 }
 
-/* -------- LINKS (boutons cybers transparents) -------- */
+/* -------- BOUTONS -------- */
 ul li a {
     display: block;
     padding: 12px;
@@ -105,56 +89,37 @@ ul li a {
     text-decoration: none;
     color: #66fcf1;
     font-weight: bold;
-
     border: 1px solid #45a29e;
     border-radius: 8px;
-
-    /* LE FOND DOIT ÊTRE TRANSPARENT MAINTENANT */
-    background: transparent; 
-
-    transition: 0.25s ease-in-out;
+    background: transparent;
+    transition: 0.25s;
     box-shadow: 0 0 10px #1f406840;
 }
 
-/* Effet néon au survol (devient opaque et lumineux) */
 ul li a:hover {
-    background: #0b1f2e; /* Devient opaque au survol pour un effet de mise au point */
-    border-color: #66fcf1;
+    background: #0b1f2e;
     color: white;
     box-shadow: 0 0 12px #66fcf1, 0 0 20px #45a29e;
     transform: translateY(-3px);
-}
-
-/* -------- STYLE DES PDF (autre couleur) -------- */
-section h3 + ul li a {
-    border-color: #9f7aea;
-    color: #d6b6ff;
-    background: transparent; /* Reste transparent */
-}
-
-section h3 + ul li a:hover {
-    box-shadow: 0 0 12px #b19cd9, 0 0 20px #9f7aea;
-    background: #1a1035; /* Devient opaque violet au survol */
-    border-color: #d6b6ff;
 }
 
 /* -------- FOOTER -------- */
 footer {
     text-align: center;
     padding: 15px;
-    font-size: 0.9em;
     border-top: 1px solid #23395d;
+    font-size: 0.9em;
 }
 
 /* -------- RESPONSIVE -------- */
-@media(max-width: 600px) {
+@media (max-width: 600px) {
     header h1 {
         font-size: 2.2rem;
     }
-    /* Les listes passent en colonne unique sur petit écran */
     ul {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
-
 }
+
+
 
