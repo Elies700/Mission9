@@ -16,17 +16,22 @@ body {
     z-index: 1; /* Le contenu est au-dessus de la vidéo */
 }
 
-#video-background {
-    position: fixed; /* Reste fixe lors du défilement */
+#gif-background {
+    position: fixed; /* Reste en fond */
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -10; /* Le mettre derrière TOUT le contenu */
-    object-fit: cover; /* Assure que la vidéo couvre l'écran sans déformation */
-    filter: brightness(60%); /* Optionnel : Assombrir la vidéo pour augmenter le contraste */
+    width: 100%;
+    height: 100%;
+
+    background-image: url("ton-gif.gif"); /* Mets le nom de ton GIF ici */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -10; /* Toujours derrière le contenu */
+    filter: brightness(60%); /* Comme ta vidéo : assombri pour le contraste */
+}
+
 }
 
 /* -------- HEADER -------- */
@@ -150,4 +155,5 @@ footer {
     ul {
         grid-template-columns: 1fr; 
     }
+
 }
